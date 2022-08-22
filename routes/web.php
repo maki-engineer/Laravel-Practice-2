@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get("/sample", "App\Http\Controllers\Sample\IndexController@show");
+Route::get("/sample/{id}", "App\Http\Controllers\Sample\IndexController@showId");
