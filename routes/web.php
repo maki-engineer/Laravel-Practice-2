@@ -20,4 +20,7 @@ Route::get('/', function () {
 Route::get("/sample", "App\Http\Controllers\Sample\IndexController@show");
 Route::get("/sample/{id}", "App\Http\Controllers\Sample\IndexController@showId");
 
-Route::get("/tweet", "App\Http\Controllers\Tweet\IndexController");
+Route::get("/tweet", "App\Http\Controllers\Tweet\IndexController")
+->name("tweet.index");
+Route::post("/tweet/create", "App\Http\Controllers\Tweet\CreateController")
+->name("tweet.create");
