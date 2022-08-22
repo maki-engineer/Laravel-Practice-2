@@ -23,6 +23,7 @@ Route::get("/sample/{id}", "App\Http\Controllers\Sample\IndexController@showId")
 Route::get("/tweet", "App\Http\Controllers\Tweet\IndexController")
 ->name("tweet.index");
 Route::post("/tweet/create", "App\Http\Controllers\Tweet\CreateController")
+->middleware("auth")
 ->name("tweet.create");
 Route::get("/tweet/update/{tweetId}", "App\Http\Controllers\Tweet\Update\IndexController")
 ->name("tweet.update.index")
