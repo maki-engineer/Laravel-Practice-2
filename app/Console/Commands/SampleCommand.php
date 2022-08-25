@@ -11,14 +11,14 @@ class SampleCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'sample-command';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Sample Command';
 
     /**
      * Execute the console command.
@@ -27,6 +27,7 @@ class SampleCommand extends Command
      */
     public function handle()
     {
+        echo "This command is sample.";
         return 0;
     }
 }
