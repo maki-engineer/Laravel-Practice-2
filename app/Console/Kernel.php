@@ -17,6 +17,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
 
+        $schedule->command('mail:send-daily-tweet-count-mail')->dailyAt('11:00');
+
         // 毎分
         $schedule->command('sample-command')->everyMinute()
         ->emailOutputTo('info@example.com');
