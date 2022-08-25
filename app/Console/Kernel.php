@@ -18,7 +18,8 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
 
         // 毎分
-        $schedule->command('sample-command')->everyMinute();
+        $schedule->command('sample-command')->everyMinute()
+        ->emailOutputTo('info@example.com');
 
         // 毎時
         $schedule->command('sample-command')->hourly();
